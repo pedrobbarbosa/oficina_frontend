@@ -1,46 +1,106 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <a href='https://br.freepik.com/vetores/logotipo'>
+        <img alt="Logo" src=".github/logo.jpg" width="200px" />
+    </a>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">
+  Oficina 2.0
+</h3>
 
-## Available Scripts
+<p align="center">
+Documentação do projeto Oficina 2.0 realizado no teste técnico de avaliação da codificar.
+</p>
 
-In the project directory, you can run:
+<p align="center">
+  <a href="">
+    <img alt="Language" src="https://img.shields.io/badge/language%20-JavaScript%20-blue">
+  </a>
 
-### `yarn start`
+  <a href="">
+    <img alt="Made by" src="https://img.shields.io/badge/made%20by-Pedro%20Barbosa-gree">
+  </a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <a href="">
+    <img alt="Made by" src="https://img.shields.io/badge/license%20by-MIT%20-yellow">
+  </a>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+</p>
 
-### `yarn test`
+<p align="center">
+  <a href="#-about-the-project">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-getting-started">Começando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license">License</a>
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 👨🏻‍💻 About the project
 
-### `yarn build`
+- <p style="font-weight: bold;">
+  Frontend criado para consumir os recursos da API Rest do projeto Oficina 2.0. Quase todas as funcionalidades foram aplicadas, com exceção da barra de pesquisa com sugestões automáticas e filtragem.
+  O projeto pode ser utilizado com ou sem docker, siga as instruções abaixo para saber mais.
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Tarefas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [x] Os campos de cadastro serão: id, cliente, data e hora do orçamento, vendedor, descrição, valor orçado. A tela deve permitir também a edição.
+  - [x] CRUD de cliente
+  - [x] CRUD de vendedor
+  - [x] CRUD de orçamento
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [] Pesquisas
+  - [x] A tela deverá conter uma tabela com os dados já filtrados e listados por ordem decrescente da data de cadastro do orçamento
+  - [] Criar uma tela de pesquisa de orçamento
+  - [] A tela de pesquisa deverá ter filtro por intervalo de datas, nome do cliente e nome do vendedor.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para ver a  **api** do projeto, clique aqui: [Oficina Rest API](https://github.com/pedrobbarbosa/Oficina2.0)</br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Tecnologias
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Tecnologias que eu utilizei para desenvolver esse cliente web.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [ReactJS](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
+- [Axios](https://github.com/axios/axios)
 
-## Learn More
+## 💻 Começando
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Requisitos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Ter essa aplicação [API](https://github.com/pedrobbarbosa/Oficina2.0) executando
+
+**Clone o projeto e acesse o arquivo**
+
+```bash
+$ git clone https://github.com/pedrobbarbosa/oficina_frontend.git && cd oficina_frontend
+```
+
+**Siga os passos abaixo para executar a aplicação com docker**
+
+```bash
+# Va até a raiz do projeto
+$ docker build -t oficina_frontend .
+
+# Be sure the file 'src/services/api.ts' have the IP to your API
+$ docker run -p 3000:3000 oficina_frontend
+
+# Acesse a url
+$ http://localhost:3000/
+```
+
+**Caso não consiga/queira utilizar o docker**
+
+```bash
+# Va até a raiz do projeto
+$ yarn
+
+# Be sure the file 'src/services/api.ts' have the IP to your API
+$ yarn run
+
+# Acesse a url
+$ http://localhost:3000/
+```
+
+Made with 💜 &nbsp;by Pedro Barbosa
